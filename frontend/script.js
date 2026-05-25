@@ -1,10 +1,20 @@
-async function generateImage(){
+async function generateImage() {
 
-    const prompt = document.getElementById("prompt").value;
+    const prompt =
+    document.getElementById("prompt").value;
 
-    const image = document.getElementById("output");
+    const output =
+    document.getElementById("output");
 
-    image.src =
-    `https://image.pollinations.ai/prompt/${prompt}`;
+    // Loading placeholder
+    output.src =
+    "https://via.placeholder.com/512?text=Generating...";
 
+    // Encode prompt properly
+    const encodedPrompt =
+    encodeURIComponent(prompt);
+
+    // Generate image
+    output.src =
+    `https://image.pollinations.ai/prompt/${encodedPrompt}`;
 }
