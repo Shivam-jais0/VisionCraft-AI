@@ -4,24 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VisionCraft AI</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
 </head>
 <body>
 
+<div class="bg"></div>
+
 <div class="container">
+
     <h1>VisionCraft AI</h1>
 
-    <input type="text" id="prompt" placeholder="Enter your imagination...">
+    <p class="subtitle">
+        Create stunning AI-generated images instantly
+    </p>
 
-    <button onclick="generateImage()">
-        Generate Image
-    </button>
+    <div class="prompt-box">
 
-    <div class="image-box">
-        <img id="output" src="">
+        <input
+        type="text"
+        id="prompt"
+        placeholder="Describe your imagination..."
+        >
+
+        <button onclick="generateImage()">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Generate
+        </button>
+
     </div>
+
+    <div class="suggestions">
+
+        <span onclick="setPrompt(this)">
+            Cyberpunk City
+        </span>
+
+        <span onclick="setPrompt(this)">
+            Anime Warrior
+        </span>
+
+        <span onclick="setPrompt(this)">
+            Space Galaxy
+        </span>
+
+        <span onclick="setPrompt(this)">
+            AI Robot
+        </span>
+
+    </div>
+
+    <div class="image-card">
+
+        <img id="output">
+
+        <div class="actions">
+
+            <a id="downloadBtn" download="visioncraft.png">
+                <i class="fa-solid fa-download"></i>
+                Download
+            </a>
+
+        </div>
+
+    </div>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
